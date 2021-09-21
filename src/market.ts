@@ -1364,18 +1364,18 @@ export class OpenOrders {
     programId: PublicKey,
   ) {
     const filters = [
-      {
-        memcmp: {
-          offset: this.getLayout(programId).offsetOf('market'),
-          bytes: marketAddress.toBase58(),
-        },
-      },
-      {
-        memcmp: {
-          offset: this.getLayout(programId).offsetOf('owner'),
-          bytes: ownerAddress.toBase58(),
-        },
-      },
+      // {
+      //   memcmp: {
+      //     offset: this.getLayout(programId).offsetOf('market'),
+      //     bytes: marketAddress.toBase58(),
+      //   },
+      // },
+      // {
+      //   memcmp: {
+      //     offset: this.getLayout(programId).offsetOf('owner'),
+      //     bytes: ownerAddress.toBase58(),
+      //   },
+      // },
       {
         dataSize: this.getLayout(programId).span,
       },
